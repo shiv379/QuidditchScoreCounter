@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Court Counter</string>
+    <string name="app_name">Quidditch Counter</string>
+    <string name="fouls">Fouls: %1$d</string>
+    <string name="snitch">Caught the snitch</string>
+    <string name="goal">Goal</string>
+    <string name="keeper">K: %1$s</string>
+    <string name="seeker">S: %1$s</string>
+    <string name="beater">B: %1$s</string>
+    <string name="chaser">C: %1$s</string>
 </resources>
