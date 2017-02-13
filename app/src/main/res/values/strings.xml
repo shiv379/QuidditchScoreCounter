@@ -7,4 +7,9 @@
     <string name="seeker">S: %1$s</string>
     <string name="beater">B: %1$s</string>
     <string name="chaser">C: %1$s</string>
+    <string name="wins">%1$s wins!</string>
+    <string name="draw">It\'s a draw!</string>
+    <string name="new_game">New Game</string>
+    <string name="quaffle_content_desc">Quaffle ball</string>
+    <string name="snitch_content_desc">Golden snitch</string>
 </resources>

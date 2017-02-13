@@ -6,4 +6,5 @@
     <dimen name="half_margin">8dp</dimen>
     <dimen name="size_team_name">14sp</dimen>
     <dimen name="size_score">56sp</dimen>
+    <dimen name="size_wins">48sp</dimen>
 </resources>

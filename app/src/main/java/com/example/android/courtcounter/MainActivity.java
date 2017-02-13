@@ -1,9 +1,10 @@
 package com.example.android.courtcounter;
 
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import static com.example.android.courtcounter.R.id.beater1A;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     int foulsTeamA = 0;
     int foulsTeamB = 0;
     String[] names = new String[16];
-
+    TextView[] nameTVList = new TextView[16];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateNames(){
-        TextView[] nameTVList = new TextView[16];
         nameTVList[0] = (TextView) findViewById(teamNameA);
         nameTVList[1] = (TextView) findViewById(teamNameB);
         nameTVList[2] = (TextView) findViewById(seekerA);
@@ -108,26 +108,37 @@ public class MainActivity extends AppCompatActivity {
         foulsViewA.setText(foulsA);
         scoreViewB.setText(String.valueOf(scoreTeamB));
         foulsViewB.setText(foulsB);
+
+        if (scoreTeamA>scoreTeamB){
+            scoreViewA.setTextColor(Color.GREEN);
+            scoreViewB.setTextColor(Color.RED);
+        } else if (scoreTeamA<scoreTeamB) {
+            scoreViewA.setTextColor(Color.RED);
+            scoreViewB.setTextColor(Color.GREEN);
+        } else {
+            scoreViewA.setTextColor(Color.BLACK);
+            scoreViewB.setTextColor(Color.BLACK);
+        }
     }
 
-    public void endGame(int team){
-//        if (team=0) {
-//
-//        } else {
-//
-//        }
-        Button gtA = (Button) findViewById(R.id.button_goal_teamA);
-        Button gtB = (Button) findViewById(R.id.button_goal_teamB);
-        Button sA = (Button) findViewById(R.id.button_snitch_teamA);
-        Button sB = (Button) findViewById(R.id.button_snitch_teamB);
-        Button fA = (Button) findViewById(R.id.team_a_foul_button);
-        Button fB = (Button) findViewById(R.id.team_b_foul_button);
-        gtA.setEnabled(false);
-        gtB.setEnabled(false);
-        sA.setEnabled(false);
-        sB.setEnabled(false);
-        fA.setEnabled(false);
-        fB.setEnabled(false);
+    public void endGame(){
+        TextView winTextView = (TextView)findViewById(R.id.win_text);
+        if (scoreTeamA>scoreTeamB){
+            winTextView.setText(getString(R.string.wins,names[0]));
+        } else if (scoreTeamA<scoreTeamB) {
+            winTextView.setText(getString(R.string.wins,names[1]));
+        } else {
+            winTextView.setText(R.string.draw);
+        }
+
+        findViewById(R.id.team_a_foul_button).setVisibility(View.INVISIBLE);
+        findViewById(R.id.team_b_foul_button).setVisibility(View.INVISIBLE);
+
+        findViewById(R.id.goal_layout).setVisibility(View.GONE);
+        findViewById(R.id.snitch_layout).setVisibility(View.GONE);
+
+
+        findViewById(R.id.wins_layout).setVisibility(View.VISIBLE);
     }
 
     public void goalTeamA(View view){
@@ -137,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
     public void snitchTeamA(View view){
         scoreTeamA += 150;
         updateScores();
-        endGame(0);
+        endGame();
     }
 
     public void goalTeamB(View view){
@@ -148,15 +159,26 @@ public class MainActivity extends AppCompatActivity {
     public void snitchTeamB(View view){
         scoreTeamB += 150;
         updateScores();
-        endGame(1);
+        endGame();
     }
 
-    public void  resetScore(View view){
+    public void  resetGame(View view){
         scoreTeamA = 0;
         scoreTeamB = 0;
         foulsTeamA = 0;
         foulsTeamB = 0;
         updateScores();
+
+        findViewById(R.id.team_a_foul_button).setVisibility(View.VISIBLE);
+        findViewById(R.id.team_b_foul_button).setVisibility(View.VISIBLE);
+        findViewById(R.id.goal_layout).setVisibility(View.VISIBLE);
+        findViewById(R.id.snitch_layout).setVisibility(View.VISIBLE);
+        findViewById(R.id.wins_layout).setVisibility(View.GONE);
+
+        for (int i=2; i<nameTVList.length; i++) {
+            nameTVList[i].setPaintFlags(nameTVList[i].getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+            nameTVList[i].setEnabled(true);
+        }
     }
 
     public void setFoulsTeamA(View view){
@@ -167,5 +189,11 @@ public class MainActivity extends AppCompatActivity {
     public void setFoulsTeamB(View view){
         foulsTeamB += 1;
         updateScores();
+    }
+
+    public void playerClickedHandler(View view){
+        TextView textView =(TextView)findViewById(view.getId());
+        textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        textView.setEnabled(false);
     }
 }
