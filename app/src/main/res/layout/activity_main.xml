@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:fontFamily="sans-serif-medium"
+                    android:fontFamily="cursive"
                     android:text=""
                     android:textColor="@color/colorTeamName"
                     android:textSize="@dimen/size_team_name" />
@@ -48,7 +48,7 @@
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
                     android:layout_marginLeft="@dimen/double_margin"
                     android:layout_marginRight="@dimen/double_margin"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="cursive"
                     android:text=""
                     android:textColor="@color/colorScore"
                     android:textSize="@dimen/size_score" />
@@ -61,7 +61,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/seeker"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/beater1A"
@@ -71,7 +72,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/beater"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/beater2A"
@@ -81,7 +83,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/beater"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/chaser1A"
@@ -91,7 +94,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/chaser"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/chaser2A"
@@ -101,7 +105,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/chaser"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/chaser3A"
@@ -111,7 +116,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/chaser"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/keeperA"
@@ -121,7 +127,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/keeper"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -138,7 +145,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="start"
-                        android:text="@string/fouls" />
+                        android:text="@string/fouls"
+                        android:fontFamily="cursive"/>
 
                     <Button
                         android:layout_width="wrap_content"
@@ -150,7 +158,8 @@
                         android:layout_alignParentEnd="true"
                         android:id="@+id/team_a_foul_button"
                         android:onClick="setFoulsTeamA"
-                        android:text="+" />
+                        android:text="+"
+                        android:fontFamily="cursive"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -172,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:fontFamily="sans-serif-medium"
+                    android:fontFamily="cursive"
                     android:text=""
                     android:textColor="@color/colorTeamName"
                     android:textSize="@dimen/size_team_name" />
@@ -183,7 +192,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:fontFamily="sans-serif-light"
+                    android:fontFamily="cursive"
                     android:text=""
                     android:textColor="@color/colorScore"
                     android:textSize="@dimen/size_score" />
@@ -196,7 +205,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/seeker"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/beater1B"
@@ -206,7 +216,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/beater"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/beater2B"
@@ -216,7 +227,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/beater"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/chaser1B"
@@ -226,7 +238,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/chaser"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/chaser2B"
@@ -236,7 +249,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/chaser"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/chaser3B"
@@ -246,7 +260,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/chaser"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
                 <TextView
                     android:id="@+id/keeperB"
@@ -256,7 +271,8 @@
                     android:layout_marginLeft="@dimen/activity_vertical_margin"
                     android:layout_marginRight="@dimen/activity_vertical_margin"
                     android:text="@string/keeper"
-                    android:onClick="playerClickedHandler"/>
+                    android:onClick="playerClickedHandler"
+                    android:fontFamily="cursive"/>
 
 
                 <RelativeLayout
@@ -274,7 +290,8 @@
                         android:layout_alignParentStart="true"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="start"
-                        android:text="@string/fouls" />
+                        android:text="@string/fouls"
+                        android:fontFamily="cursive"/>
 
                     <Button
                         android:layout_width="wrap_content"
@@ -286,7 +303,8 @@
                         android:layout_alignParentRight="true"
                         android:id="@+id/team_b_foul_button"
                         android:onClick="setFoulsTeamB"
-                        android:text="+" />
+                        android:text="+"
+                        android:fontFamily="cursive"/>
                 </RelativeLayout>
 
             </LinearLayout>
@@ -304,12 +322,14 @@
                 android:id="@+id/win_text"
                 android:textSize="@dimen/size_wins"
                 android:layout_marginBottom="@dimen/double_margin"
-                android:text="@string/wins"/>
+                android:text="@string/wins"
+                android:fontFamily="cursive"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="resetGame"
-                android:text="@string/new_game"/>
+                android:text="@string/new_game"
+                android:fontFamily="cursive"/>
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -322,7 +342,8 @@
             android:layout_weight=".3"
             android:id="@+id/button_goal_teamA"
             android:onClick="goalTeamA"
-            android:text="@string/goal" />
+            android:text="@string/goal"
+            android:fontFamily="cursive"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -337,7 +358,8 @@
             android:layout_weight=".3"
             android:id="@+id/button_goal_teamB"
             android:onClick="goalTeamB"
-            android:text="@string/goal" />
+            android:text="@string/goal"
+            android:fontFamily="cursive"/>
     </LinearLayout>
 
         <LinearLayout
@@ -350,7 +372,8 @@
                 android:layout_weight=".3"
                 android:id="@+id/button_snitch_teamA"
                 android:onClick="snitchTeamA"
-                android:text="@string/snitch" />
+                android:text="@string/snitch"
+                android:fontFamily="cursive"/>
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
@@ -364,7 +387,8 @@
                 android:layout_weight="0.3"
                 android:id="@+id/button_snitch_teamB"
                 android:onClick="snitchTeamB"
-                android:text="@string/snitch" />
+                android:text="@string/snitch"
+                android:fontFamily="cursive"/>
 
 
         </LinearLayout>
