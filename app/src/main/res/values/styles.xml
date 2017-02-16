@@ -5,5 +5,123 @@
         <item name="colorPrimary">#FF9800</item>
         <!-- Background color of buttons in the app -->
         <item name="colorButtonNormal">#FF9800</item>
+        <item name="android:fontFamily">cursive</item>
     </style>
+<style name="base_layout">
+    <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+    <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+    <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+    <item name="android:layout_marginTop">@dimen/activity_vertical_margin</item>
+</style>
+    <style name="team_col">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="team_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:textColor">@color/colorTeamName</item>
+        <item name="android:textSize">@dimen/size_team_name</item>
+    </style>
+
+    <style name="score">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/double_margin</item>
+        <item name="android:layout_marginRight">@dimen/double_margin</item>
+
+        <item name="android:textColor">@color/colorScore</item>
+        <item name="android:textSize">@dimen/size_score</item>
+    </style>
+
+    <style name="player">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/half_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_vertical_margin</item>
+    </style>
+
+    <style name="fouls">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">start</item>
+        <item name="android:layout_marginBottom">@dimen/half_margin</item>
+    </style>
+
+    <style name="foul_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
+    <style name="wins_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="wins_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/double_margin</item>
+        <item name="android:textSize">@dimen/size_wins</item>
+    </style>
+
+    <style name="reset_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="goal_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/double_margin</item>
+    </style>
+
+    <style name="score_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">.3</item>
+    </style>
+
+    <style name="ball_image">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">0.4</item>
+        <item name="android:contentDescription">@string/quaffle_content_desc</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="divider_vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <style name="fouls_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/activity_vertical_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_vertical_margin</item>
+    </style>
+
 </resources>

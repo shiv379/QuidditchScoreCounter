@@ -3,12 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
+    style="@style/base_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/activity_vertical_margin"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
-    android:layout_marginTop="@dimen/activity_vertical_margin"
     tools:context="com.example.android.courtcounter.MainActivity">
 
     <LinearLayout
@@ -19,376 +16,212 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/double_margin">
+            android:layout_marginBottom="@dimen/double_margin"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+            <LinearLayout style="@style/team_col">
 
                 <TextView
                     android:id="@+id/teamNameA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:fontFamily="cursive"
-                    android:text=""
-                    android:textColor="@color/colorTeamName"
-                    android:textSize="@dimen/size_team_name" />
+                    style="@style/team_name"
+                    android:text="" />
 
                 <TextView
                     android:id="@+id/team_a_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:layout_marginLeft="@dimen/double_margin"
-                    android:layout_marginRight="@dimen/double_margin"
-                    android:fontFamily="cursive"
-                    android:text=""
-                    android:textColor="@color/colorScore"
-                    android:textSize="@dimen/size_score" />
+                    style="@style/score"
+                    android:text="" />
 
                 <TextView
                     android:id="@+id/seekerA"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/seeker"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/seeker"
+                    style="@style/player" />
 
                 <TextView
                     android:id="@+id/beater1A"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/beater"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/beater" />
 
                 <TextView
                     android:id="@+id/beater2A"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/beater"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/beater" />
 
                 <TextView
                     android:id="@+id/chaser1A"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/chaser"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/chaser" />
 
                 <TextView
                     android:id="@+id/chaser2A"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/chaser"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/chaser" />
 
                 <TextView
                     android:id="@+id/chaser3A"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/chaser"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/chaser" />
 
                 <TextView
                     android:id="@+id/keeperA"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/keeper"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/keeper" />
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin">
+                    style="@style/fouls_layout">
 
                     <TextView
                         android:id="@+id/team_a_fouls"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/half_margin"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_gravity="start"
-                        android:text="@string/fouls"
-                        android:fontFamily="cursive"/>
+                        style="@style/fouls"
+                        android:text="@string/fouls" />
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minHeight="0dp"
-                        android:minWidth="0dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true"
                         android:id="@+id/team_a_foul_button"
                         android:onClick="setFoulsTeamA"
                         android:text="+"
-                        android:fontFamily="cursive"/>
+                        style="@style/foul_button" />
                 </RelativeLayout>
             </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@android:color/darker_gray"></View>
+            <View style="@style/divider_vertical"></View>
 
             <LinearLayout
                 android:id="@+id/teamB"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                style="@style/team_col">
 
                 <TextView
                     android:id="@+id/teamNameB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:fontFamily="cursive"
-                    android:text=""
-                    android:textColor="@color/colorTeamName"
-                    android:textSize="@dimen/size_team_name" />
+                    style="@style/team_name"
+                    android:text="" />
 
                 <TextView
                     android:id="@+id/team_b_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:fontFamily="cursive"
-                    android:text=""
-                    android:textColor="@color/colorScore"
-                    android:textSize="@dimen/size_score" />
+                    style="@style/score"
+                    android:text=""/>
 
                 <TextView
                     android:id="@+id/seekerB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/seeker"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/seeker" />
 
                 <TextView
                     android:id="@+id/beater1B"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/beater"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/beater" />
 
                 <TextView
                     android:id="@+id/beater2B"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/beater"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/beater" />
 
                 <TextView
                     android:id="@+id/chaser1B"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/chaser"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/chaser" />
 
                 <TextView
                     android:id="@+id/chaser2B"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/chaser"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/chaser" />
 
                 <TextView
                     android:id="@+id/chaser3B"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/chaser"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/chaser" />
 
                 <TextView
                     android:id="@+id/keeperB"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/half_margin"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin"
-                    android:text="@string/keeper"
+                    style="@style/player"
                     android:onClick="playerClickedHandler"
-                    android:fontFamily="cursive"/>
+                    android:text="@string/keeper" />
 
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_vertical_margin"
-                    android:layout_marginRight="@dimen/activity_vertical_margin">
+                <RelativeLayout style="@style/fouls_layout">
 
                     <TextView
                         android:id="@+id/team_b_fouls"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/half_margin"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_gravity="start"
                         android:text="@string/fouls"
-                        android:fontFamily="cursive"/>
+                        style="@style/fouls" />
 
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minHeight="0dp"
-                        android:minWidth="0dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
                         android:id="@+id/team_b_foul_button"
+                        style="@style/foul_button"
                         android:onClick="setFoulsTeamB"
-                        android:text="+"
-                        android:fontFamily="cursive"/>
+                        android:text="+" />
                 </RelativeLayout>
 
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/wins_layout"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:visibility="gone">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/win_text"
-                android:textSize="@dimen/size_wins"
-                android:layout_marginBottom="@dimen/double_margin"
-                android:text="@string/wins"
-                android:fontFamily="cursive"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="resetGame"
-                android:text="@string/new_game"
-                android:fontFamily="cursive"/>
-        </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/goal_layout"
-        android:layout_marginBottom="@dimen/double_margin">
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".3"
-            android:id="@+id/button_goal_teamA"
-            android:onClick="goalTeamA"
-            android:text="@string/goal"
-            android:fontFamily="cursive"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.4"
-            android:gravity="center_horizontal"
-            app:srcCompat="@drawable/quaffle"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/quaffle_content_desc"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".3"
-            android:id="@+id/button_goal_teamB"
-            android:onClick="goalTeamB"
-            android:text="@string/goal"
-            android:fontFamily="cursive"/>
-    </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/snitch_layout">
+            android:id="@+id/wins_layout"
+            style="@style/wins_layout">
+
+            <TextView
+                android:id="@+id/win_text"
+                android:text="@string/wins"
+                style="@style/wins_text" />
+
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".3"
+                android:onClick="resetGame"
+                android:text="@string/new_game"
+                style="@style/reset_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goal_layout"
+            style="@style/goal_layout">
+
+            <Button
+                android:id="@+id/button_goal_teamA"
+                android:onClick="goalTeamA"
+                android:text="@string/goal"
+                style="@style/score_button" />
+
+            <ImageView
+                app:srcCompat="@drawable/quaffle"
+                style="@style/ball_image" />
+
+            <Button
+                android:id="@+id/button_goal_teamB"
+                style="@style/score_button"
+                android:onClick="goalTeamB"
+                android:text="@string/goal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/snitch_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
                 android:id="@+id/button_snitch_teamA"
                 android:onClick="snitchTeamA"
                 android:text="@string/snitch"
-                android:fontFamily="cursive"/>
+                style="@style/score_button" />
+
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="0.4"
-                app:srcCompat="@drawable/snitch"
-                android:scaleType="fitCenter"
-                android:contentDescription="@string/snitch_content_desc"/>
+                style="@style/ball_image"
+                android:contentDescription="@string/snitch_content_desc"
+                app:srcCompat="@drawable/snitch" />
+
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.3"
                 android:id="@+id/button_snitch_teamB"
+                style="@style/score_button"
                 android:onClick="snitchTeamB"
-                android:text="@string/snitch"
-                android:fontFamily="cursive"/>
+                android:text="@string/snitch" />
 
 
         </LinearLayout>
